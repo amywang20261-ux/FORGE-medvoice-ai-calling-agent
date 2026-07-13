@@ -1,0 +1,34 @@
+{
+  "patient_id": "demo-001",
+  "first_name": "Jordan",
+  "health_conditions": [
+    "high blood pressure"
+  ],
+  "medications": [
+    {
+      "generic_name": "lisinopril",
+      "brand_names": [
+        "Prinivil",
+        "Zestril"
+      ],
+      "dose": "10 mg",
+      "frequency": "once daily"
+    },
+    {
+      "generic_name": "furosemide",
+      "brand_names": [
+        "Lasix"
+      ],
+      "dose": "20 mg",
+      "frequency": "once daily"
+    },
+    {
+      "generic_name": "gabapentin",
+      "brand_names": [
+        "Neurontin"
+      ],
+      "dose": "300 mg",
+      "frequency": "twice daily"
+    }
+  ]
+}

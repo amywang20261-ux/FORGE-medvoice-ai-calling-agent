@@ -1,0 +1,65 @@
+MedVoice: Hello Jordan. I am MedVoice, an automated assistant helping you prepare for your medication visit. I cannot change medications or provide emergency care. Please have your medication bottles, list, or a trusted helper nearby if possible. Are you ready to begin?
+
+Patient: Yes
+MedVoice: Thank you. Are you taking any medications for your high blood pressure? You may use the name on the bottle, a brand name, or say that you do not remember.
+
+Patient: I don't remember what it's called exactly.
+MedVoice: That is okay. Your current list shows Lisinopril (Prinivil/Zestril) and Furosemide (Lasix). Do either of those names match the medicine you take for blood pressure?
+
+Patient: Lisinopril sounds familiar. I'm also taking Lasix.
+MedVoice: Thank you. I have recorded that. Please tell me the medication name, what you take it for, how often you take it, and any side effects or questions you want your care team to review.
+
+Patient: Gabapentin helps me sleep at night. I take it twice a day, but it makes me nauseous every time. Could I get Zofran?
+MedVoice: I am sorry the nausea is happening after every dose. I cannot recommend starting, stopping, tapering, or changing a medication. I will record your question so your physician or pharmacist can review it with you. You also said gabapentin helps you sleep. Is keeping that benefit important to you?
+
+Patient: No, I've tried different medications and varied the dose. The current way I take it works the best.
+MedVoice: I understand. I will record that you prefer the current gabapentin routine because it works better for you than previous options, while the nausea remains a concern. What would you most like your clinician to discuss with you?
+
+Patient: I want my doctor to help with the nausea without losing the sleep benefit.
+MedVoice: Thank you. I have recorded that. Please tell me the medication name, what you take it for, how often you take it, and any side effects or questions you want your care team to review.
+
+--- CARE TEAM SUMMARY ---
+{
+  "patient_id": "demo-001",
+  "medications_discussed": {
+    "lisinopril": {
+      "listed_dose": "10 mg",
+      "listed_frequency": "once daily",
+      "patient_statements": [
+        "Lisinopril sounds familiar. I'm also taking Lasix."
+      ]
+    },
+    "gabapentin": {
+      "listed_dose": "300 mg",
+      "listed_frequency": "twice daily",
+      "patient_statements": [
+        "Gabapentin helps me sleep at night. I take it twice a day, but it makes me nauseous every time. Could I get Zofran?"
+      ]
+    }
+  },
+  "questions_for_care_team": [
+    "Patient asks whether treatment is appropriate for nausea associated with gabapentin."
+  ],
+  "preferences": [
+    "Patient prefers to remain on the current gabapentin regimen because prior alternatives or dose changes were less helpful."
+  ],
+  "possible_side_effects": [
+    {
+      "medication": "gabapentin",
+      "reported_effect": "nausea after each dose"
+    }
+  ],
+  "medication_list_corrections": []
+}
+
+ERROR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/generated/interface/models.py", line 30820, in hydrate_crdt_from_proto
+  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.yTcnQsZYiA/artifact_tool_v2-2.8.4/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
